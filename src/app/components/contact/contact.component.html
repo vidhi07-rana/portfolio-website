@@ -1,0 +1,24 @@
+<section class="contact" style="margin-right: 30px;">
+    <h2>Contact Me</h2>
+    <p style="color: #333; font-size: 1.1rem; line-height: 1.6; font-family: 'Arial', sans-serif;">
+      I’m always happy to connect! Feel free to reach out with any questions, opportunities, or just to say hello.
+  </p>    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Name</mat-label>
+        <input matInput name="name" ngModel required />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" name="email" ngModel required />
+      </mat-form-field>
+       
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Message</mat-label>
+        <textarea matInput name="message" ngModel required></textarea>
+      </mat-form-field>
+    
+      <button class="mat-button" type="submit">Submit</button>
+    </form>
+  </section>      
+  

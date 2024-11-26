@@ -1,0 +1,126 @@
+/* Header Section */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #d5b1fb 0%, #76a7fb 100%);
+    color: white;
+    padding: 3rem 1rem;
+    position: relative;
+    overflow: hidden;
+    height: 80vh;
+  }
+  
+  /* Profile Image */
+  .header img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeInDown 1s ease-in-out;
+  }
+  
+  /* Header Title */
+  .header h1 {
+    font-size: 3rem;
+    margin: 1.5rem 0 0.5rem;
+    font-family: 'Poppins', sans-serif;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  /* Subheading */
+  .header p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  /* Contact Me Button */
+  .header button {
+    background-color: white;
+    color: #2575fc;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    animation: pulse 2.5s infinite;
+  }
+  
+  .header button:hover {
+    background-color: #2575fc;
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  /* Animation Keyframes */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  
+  /* Floating Particles Animation */
+  .header::before,
+  .header::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: floating 6s ease-in-out infinite;
+  }
+  
+  .header::before {
+    top: -50px;
+    left: -50px;
+    animation-delay: 0s;
+  }
+  
+  .header::after {
+    bottom: -50px;
+    right: -50px;
+    animation-delay: 3s;
+  }
+  
+  @keyframes floating {
+    0%, 100% {
+      transform: translateY(0) translateX(0);
+    }
+    50% {
+      transform: translateY(-30px) translateX(30px);
+    }
+  }
+  

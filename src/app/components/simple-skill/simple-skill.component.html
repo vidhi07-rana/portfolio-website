@@ -1,0 +1,11 @@
+<div class="skills-container">
+    <div class="skill-item" *ngFor="let skill of skills">
+      <div 
+        class="skill-bar" 
+        [ngClass]="{ 'filled': true }"
+        [style.--width.%]="skill.level">
+      </div>
+      <p>{{ skill.name }} ({{ skill.level }}%)</p>
+    </div>
+  </div>
+  

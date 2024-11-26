@@ -1,0 +1,47 @@
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #d5b1fb 0%, #8ab1f6 100%);
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 150px;
+  }
+  
+  .site-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .spacer {
+    flex: 1;
+  }
+  
+  mat-nav-list a {
+    margin: 0 15px;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  mat-nav-list a:hover {
+    text-decoration: underline;
+    text-decoration :none;
+
+  }
+  /* Style for the active link */
+.active-link {
+    background-color: #cccfd1; /* Blue background for active link */
+    color: white; /* White text for the active link */
+    border-radius: 4px;
+    padding: 8px 16px;
+  }
+  
+  a.mat-button {
+    transition: all 0.3s ease;
+  }
+  
+  a.mat-button:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+    text-decoration :none;
+  }
+  

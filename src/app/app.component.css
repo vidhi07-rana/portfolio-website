@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  router-outlet {
+    display: block;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  

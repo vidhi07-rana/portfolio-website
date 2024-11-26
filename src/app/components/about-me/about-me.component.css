@@ -1,0 +1,229 @@
+
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* About Me Section */
+.about-me {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-in-out;
+  padding: 10px;
+}
+
+/* Content Container */
+.content-container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  animation: slideIn 1.2s ease-in-out;
+}
+
+/* Image Styling */
+.about-image {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.about-image {
+  transition: transform 1s ease, box-shadow 0.3s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* About Text Section */
+.about-text h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #555;
+  animation: fadeIn 1.8s ease-in-out;
+}
+
+.about-text h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Skills Section */
+.app-simple-skill {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.skill-card {
+  background-color: #f4f6da;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: scaleUp 1s ease-in-out;
+}
+
+.skill-card:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.skill-card:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+.skill-card:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+.skill-card:nth-child(4) {
+  animation-delay: 1.1s;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.skill-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Timeline Slide Section */
+.timeline-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+.timeline-item {
+  padding: 15px;
+  border-left: 4px solid #007bff;
+  background: #f8f9fa;
+  border-radius: 5px;
+  position: relative;
+}
+
+.timeline-item h4 {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.timeline-item p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Hobbies and Goals Section */
+.hobbies-goals {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#goals, #hobbies {
+  flex: 1;
+  background-color: #f4f6da;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+#goals h2, #hobbies h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.goals-list, .hobbies-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.goals-list,
+.hobbies-list {
+  list-style: none; /* Removes bullets */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+}
+      
+
+.goals-list li, .hobbies-list li {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .app-simple-skill {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hobbies-goals {
+    flex-direction: column;
+  }
+}

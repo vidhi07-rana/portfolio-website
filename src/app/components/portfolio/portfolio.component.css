@@ -1,0 +1,91 @@
+.portfolio {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #fefdfd, #f8fafb);
+    color: #fff;
+    text-align: center;
+    height: 80vh;
+  }
+  
+  .portfolio h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #f9ca24;
+    letter-spacing: 2px;
+    animation: slideIn 1s ease-out;
+  }
+  
+  /* Container for Portfolio Items */
+  .portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-items: center;
+    align-items: stretch;
+    height: 510px;
+  }
+  
+  /* Individual Portfolio Item */
+  .portfolio-item {
+    background: #34495e;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: fadeInUp 1.2s ease-out;
+  }
+  
+  .portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .portfolio-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .portfolio-item img:hover {
+    transform: scale(1.1);
+  }
+  
+  .portfolio-item h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .portfolio-item p {
+    font-size: 1rem;
+    margin: 0 1rem 1.5rem;
+    color: #dcdde1;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Animations */
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

@@ -1,0 +1,14 @@
+<section class="testimonials">
+    <h2>𝙲𝚕𝚒𝚎𝚗𝚝 𝚃𝚎𝚜𝚝𝚒𝚖𝚘𝚗𝚒𝚊𝚕𝚜</h2>
+    <div class="testimonial-container">
+      <div class="testimonial" *ngFor="let testimonial of testimonials">
+        <img [src]="testimonial.image" alt="Client" class="testimonial-img">
+        <div class="testimonial-content">
+          <p class="name">{{ testimonial.name }}</p>
+          <p class="rating">Rating: {{ '★'.repeat(testimonial.rating) }}</p>
+          <p class="text">{{ testimonial.text }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
